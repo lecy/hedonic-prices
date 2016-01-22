@@ -28,4 +28,11 @@ dat$lot.size <- as.numeric( gsub( ",","", dat$lot.size ) )
 dat$sqft <- as.numeric( gsub( ",","", dat$sqft ) )
 
 dat$lot.size[ is.na( dat$lot.size ) ] <- mean( dat$lot.size, na.rm=T )
-               
+
+
+
+# clean up
+
+rm( housing.raw )
+rm( my.url )
+                

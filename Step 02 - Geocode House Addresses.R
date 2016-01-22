@@ -1,5 +1,6 @@
 
 
+source( "Step 01 - Load Housing Data.R" )
 
 
 houses <- dat[ , c("address","zip") ]

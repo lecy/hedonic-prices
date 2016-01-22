@@ -1,5 +1,7 @@
 
 
+source( "Step 01 - Load Housing Data.R" )
+
 
 # create plot function with desired aesthetics
 
@@ -40,7 +42,7 @@ plotFun( x1=dat$sqft, x2=dat$price, lab1="Size (Square Feet)", lab2="House Price
 
 # LOT SIZE
 
-plotFun( x1=dat$lot.size, x2=dat$price, lab1="Lot Size (Square Feet)", lab2="House Price", xlim=c(0,20000) )
+plotFun( x1=dat$lot.size, x2=dat$price, lab1="Lot Size (Square Feet)", lab2="House Price" )
 
 
 
