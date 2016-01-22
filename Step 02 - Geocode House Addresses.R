@@ -1,4 +1,5 @@
 
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
 
 source( "Step 01 - Load Housing Data.R" )
 
@@ -27,7 +28,7 @@ library( ggmap )
 
 # pre-geocoded version of dataset for demo
 
-lat.long <- read.csv( "lat.long.csv" )
+lat.long <- read.csv( "Data/lat.long.csv" )
 
 head( lat.long )
 
@@ -60,3 +61,9 @@ syr.map + geom_point(
                     ) 
 
 
+
+
+dat <- cbind( dat, lat.long )
+
+rm( houses )
+rm( addresses )

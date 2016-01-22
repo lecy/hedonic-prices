@@ -1,3 +1,11 @@
+
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+source( "Step 05 - Count Nearby Crimes.R" )
+
+
+
+
 ### PLOT DEMOGRAPHIC VARIABLES VS HOME PRICES
 
 

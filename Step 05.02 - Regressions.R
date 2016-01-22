@@ -1,9 +1,13 @@
 
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+source( "Step 05 - Count Nearby Crimes.R" )
 
 
 
 
-dat$school <- elementary + middle + high
+
+dat$school <- dat$elementary + dat$middle + dat$high
 
 
 

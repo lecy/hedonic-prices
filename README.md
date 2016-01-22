@@ -34,39 +34,6 @@ install.packages( "memisc" )
 source( "Step 05.02 - Regressions.R" )
 ~~~
 
+Note that files are chained together, so if you run Step 05, it will automatically run Step 04 to Step 01 recursively.
 
 
-
-## Running Files from GitHub
-
-Alternatively, if you want to run the program straight from GitHub, then do the following:
-
-Load this helper function to read R files from the GitHub pages.
-
-~~~{r}
-source_github <- function(u) {
-  # load package
-  require(RCurl)
- 
-  # read script lines from website
-  script <- getURL(u, ssl.verifypeer = FALSE)
- 
-  # parase lines and evealuate in the global environement
-  eval(parse(text = script), envir= .GlobalEnv)
-}
-~~~
-
-Run all of the steps in order:
-
-~~~{r}
-
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2001%20-%20Load%20Housing%20Data.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2001.01%20-%20Graph%20Relationships.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2002%20-%20Geocode%20House%20Addresses.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2003%20-%20Match%20House%20Address%20to%20Census%20Tract.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2004%20-%20Download%20Census%20Data.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2005%20-%20Count%20Nearby%20Crimes.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2005.01%20-%20Graph%20Demographic%20Predictors.R")
-source_github("https://raw.githubusercontent.com/lecy/hedonic-prices/master/Step%2005.02%20-%20Regressions.R")
-
-~~~

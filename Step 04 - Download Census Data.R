@@ -1,4 +1,11 @@
 
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+source( "Step 03 - Match House Address to Census Tract.R" )
+
+
+
+
 ### DOWNLOAD CENSUS DATA THROUGH API
 
 # http://www.census.gov/developers/
@@ -91,3 +98,15 @@ cen.dat <- cbind( poverty, prop.black )
 
 names( cen.dat ) <- c( "poverty", "state", "county", "tract", "prop.black" )
 
+
+
+rm( APIkey )
+rm( black )
+rm( county )
+rm( fieldnm )
+rm( json.to.data )
+rm( poverty )
+rm( prop.black )
+rm( resURL )
+rm( state )
+rm( tot.pop ) 

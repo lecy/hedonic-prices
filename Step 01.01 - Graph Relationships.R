@@ -1,4 +1,8 @@
 
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+
+
 
 source( "Step 01 - Load Housing Data.R" )
 

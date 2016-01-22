@@ -1,4 +1,9 @@
 
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+source( "Step 04 - Download Census Data.R" )
+
+
 
 ### HOW MANY NEARBY CRIMES
 
@@ -6,7 +11,9 @@
 # 
 # It has been geocoded using block locations:
 
-crime.dat <- read.csv( "crime.lat.lon.csv" )
+crime.dat <- read.csv( "Data/crime.lat.lon.csv" )
+
+library( ggmap )
 
 syracuse <- get_map( location='syracuse, ny', zoom = 11, color="bw" ) 
 
@@ -53,3 +60,5 @@ m.dat <- merge( dat, cen.dat, by.x="tract.id", by.y="tract" )
 
 
 names( m.dat )
+
+rm( lat.long )

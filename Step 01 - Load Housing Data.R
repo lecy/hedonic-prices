@@ -1,4 +1,8 @@
 
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+
+
 
 # load package to read URL data
 library( RCurl )

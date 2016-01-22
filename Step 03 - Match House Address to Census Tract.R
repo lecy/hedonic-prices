@@ -1,3 +1,12 @@
+
+# setwd( "C:/Users/jdlecy/Documents/GitHub/hedonic-prices" )
+
+source( "Step 02 - Geocode House Addresses.R" )
+
+
+
+
+
 ### MATCH GEOCODED ADRESSES TO A CENSUS TRACT
 
 # to add census data we need to associate a house with a census tract
@@ -39,5 +48,8 @@ for( i in 1:nrow(lat.long) )
 
 # combine house data with lat lon coordinates and census tract IDs
 
-dat <- cbind( dat, lat.long, tract.id )
+dat <- cbind( dat, tract.id )
 
+rm( tract.id )
+
+rm( lat.long )
