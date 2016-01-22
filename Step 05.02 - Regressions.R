@@ -37,3 +37,5 @@ mtab <- mtable(
                 summary.stats=c("R-squared","N", "p"), 
                 digits=2 
                )
+               
+mtab

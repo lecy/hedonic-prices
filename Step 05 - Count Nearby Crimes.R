@@ -54,11 +54,11 @@ dat <- cbind( dat, crime.count )
 ####   MERGE DATA
 
 
-m.dat <- merge( dat, cen.dat, by.x="tract.id", by.y="tract" )
+dat <- merge( dat, cen.dat, by.x="tract.id", by.y="tract" )
 
 
 
 
-names( m.dat )
+names( dat )
 
 rm( lat.long )

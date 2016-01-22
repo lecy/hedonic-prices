@@ -52,4 +52,4 @@ dat <- cbind( dat, tract.id )
 
 rm( tract.id )
 
-rm( lat.long )
+

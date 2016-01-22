@@ -31,26 +31,28 @@ plotFun <- function( x1, x2=price, lab1, lab2="House Price" )
 
 
 
-pdf( ".Results/Demographic Factors.pdf" )
+pdf( "Results/Demographic Factors.pdf" )
 
 
 # CRIME
 
-plotFun( x1=m.dat$crime.count, x2=m.dat$price, lab1="Num of Nearby Crimes", lab2="House Price" )
+plotFun( x1=dat$crime.count, x2=dat$price, lab1="Num of Nearby Crimes", lab2="House Price" )
 
 
 
 # POVERTY
 
-pov.vec <- as.numeric( as.factor( m.dat$poverty ) )
+pov.vec <- as.numeric( as.factor( dat$poverty ) )
 
-plotFun( x1=pov.vec, x2=m.dat$price, lab1="Poverty Rate", lab2="House Price" )
+plotFun( x1=pov.vec, x2=dat$price, lab1="Poverty Rate", lab2="House Price" )
 
 
 
 # BLACK
 
-plotFun( x1=m.dat$prop.black, x2=m.dat$price, lab1="Proportion of Population Black", lab2="House Price" )
+plotFun( x1=dat$prop.black, x2=dat$price, lab1="Proportion of Population Black", lab2="House Price" )
 
 
 dev.off()
+
+
